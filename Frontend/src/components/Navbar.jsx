@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import { Menu, X, Home, FileText, FolderGit2, Mail, Terminal, Code, Cpu, Command } from 'lucide-react';
+import { Menu, X, Home, FileText, FolderGit2, Mail, Terminal, Code, Command, Cpu, Link } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +7,7 @@ const Navbar = () => {
   const [terminalText, setTerminalText] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Terminal typing effect
   useEffect(() => {
     const text = '> rahul.init()';
     let index = 0;
@@ -19,6 +19,7 @@ const Navbar = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -34,9 +35,11 @@ const Navbar = () => {
 
   const NavItem = ({ text, Icon, to }) => (
     <Link
-      to={to} // Use Link instead of <a>
+      to={to}
       onClick={() => handleNavClick(text)}
-      className={`group flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out relative overflow-hidden hover:scale-105 transform
+      className={`group flex items-center space-x-2 px-4 py-2 rounded-lg
+        transition-all duration-300 ease-in-out relative overflow-hidden
+        hover:scale-105 transform
         ${activeItem === text 
           ? 'bg-emerald-500/20 text-emerald-400 shadow-lg shadow-emerald-500/20' 
           : 'hover:bg-slate-800/50 text-slate-400 hover:text-emerald-300'
@@ -64,10 +67,14 @@ const Navbar = () => {
 
   return (
     <div className="fixed w-full top-0 z-50 font-mono">
-     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'h-14' : 'h-16'}`}>
-
+      <nav className={`transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-xl shadow-lg shadow-emerald-500/5' 
+          : 'bg-transparent'
+      }`}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
+            {/* Logo/Brand with enhanced effects */}
             <div className="flex-shrink-0 flex items-center space-x-3 group">
               <div className="relative">
                 <Terminal className="w-6 h-6 text-emerald-400 animate-pulse" />
@@ -89,7 +96,11 @@ const Navbar = () => {
               <NavItem text="Contact Me" Icon={Mail} to="/contact" />
             </div>
 
-            {/* Mobile menu button */}
+            {/* Decorative elements */}
+            <Cpu className="absolute left-1/2 -translate-x-1/2 text-slate-700 opacity-10 w-32 h-32 animate-spin-slower" />
+            <Code className="absolute right-0 top-0 text-slate-700 opacity-20 w-32 h-32 -rotate-12" />
+
+            {/* Mobile menu button with enhanced effects */}
             <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -107,7 +118,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu with enhanced animation */}
           <div 
             className={`md:hidden transition-all duration-300 ease-in-out transform ${
               isOpen 
@@ -124,6 +135,15 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      
+      {/* Enhanced decorative elements */}
+      <div className="h-[2px] bg-gradient-to-r from-slate-900 via-emerald-500 to-slate-900 w-full relative">
+        <div className="absolute inset-0 bg-emerald-500/20 animate-pulse" />
+      </div>
+      
+      <div className="h-[1px] w-full bg-slate-800 relative overflow-hidden">
+        <div className="h-full w-20 bg-emerald-500/20 animate-[scanline_2s_linear_infinite]" />
+      </div>
     </div>
   );
 };
