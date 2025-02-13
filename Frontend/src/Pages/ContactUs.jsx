@@ -97,7 +97,7 @@ const ContactPage = () => {
               <div className="w-3 h-3 rounded-full bg-yellow-500" />
               <div className="w-3 h-3 rounded-full bg-green-500" />
               <span className="ml-4 text-emerald-400 flex items-center gap-2">
-                <Terminal className="w-4 h-4" /> contact.sh
+                <Terminal className="w-4 h-4" /> contact me 
               </span>
             </div>
           </div>

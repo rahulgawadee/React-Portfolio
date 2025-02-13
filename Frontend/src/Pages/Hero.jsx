@@ -112,35 +112,36 @@ const Homepage = () => {
           </div>
 
           {/* Right Column (Profile Image) */}
-          <div className="relative group">
-            <div className="relative rounded-2xl overflow-hidden">
-              <img
-                src="./src/assets/PROFILE.png"
-                alt="Rahul"
-                className="w-full max-w-xs md:max-w-md mx-auto rounded-2xl shadow-2xl transform transition-transform duration-500 group-hover:scale-105"
-              />
-              {/* Overlay Effects */}
-              <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="relative group flex flex-col items-center">
+  {/* Profile Image */}
+  <div className="relative rounded-2xl overflow-hidden shadow-lg transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-1">
+    <img
+      src="./src/assets/PROFILE.png"
+      alt="Rahul"
+      className="w-full max-w-xs md:max-w-md mx-auto rounded-2xl transition-all duration-500"
+    />
+    {/* Subtle Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+  </div>
+
+  {/* Social Links */}
+  <div className="flex justify-center mt-6 space-x-4">
+    {[
+      { icon: <Github />, href: "#github" },
+      { icon: <Linkedin />, href: "#linkedin" },
+      { icon: <Twitter />, href: "#twitter" }
+    ].map((social, index) => (
+      <a
+        key={index}
+        href={social.href}
+        className="p-3 bg-slate-800 rounded-full shadow-md transition-all duration-300 hover:bg-emerald-500/20 hover:shadow-lg hover:-translate-y-1"
+      >
+        <div className="text-emerald-400 w-6 h-6">{social.icon}</div>
+      </a>
+    ))}
+  </div>
             </div>
 
-            {/* Social Links */}
-            <div className="flex justify-center mt-6 space-x-4">
-              {[{ icon: <Github />, href: "#github" },
-                { icon: <Linkedin />, href: "#linkedin" },
-                { icon: <Twitter />, href: "#twitter" }
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="p-3 bg-slate-800/90 rounded-full shadow-lg hover:bg-emerald-500/20 transition-all hover:scale-110"
-                >
-                  <div className="text-emerald-400 w-6 h-6">
-                    {social.icon}
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </div>
