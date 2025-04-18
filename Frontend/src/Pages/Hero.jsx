@@ -5,7 +5,7 @@ import {
   Laptop, Globe, Star
 } from 'lucide-react';
 
-// import PROFILE from '../assets/profile.png';
+import PROFILE from '../assets/Profile.jpg';
 
 const Homepage = () => {
   const [text, setText] = useState('');
@@ -174,11 +174,11 @@ const Homepage = () => {
             {/* Profile Image Container */}
             <div className="relative rounded-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              {/* <img
+              <img
                 src={PROFILE}
                 alt="Rahul"
                 className="w-full max-w-lg mx-auto rounded-2xl transition-all duration-500 group-hover:scale-105"
-              /> */}
+              />
               {/* Decorative Elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-emerald-500/20 rounded-full blur-2xl" />
               <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" />
