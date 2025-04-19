@@ -35,40 +35,95 @@ const ProjectsPage = () => {
 
   const projects = [
     {
-      title: "AI-Powered Portfolio Generator",
-      description: "A React-based tool that generates personalized portfolio websites using AI to analyze users' professional data and create custom themes.",
-      tags: ["frontend", "ai"],
-      techStack: ["React", "TypeScript", "OpenAI", "Tailwind CSS"],
-      image: "/api/placeholder/600/400",
+      title: "Interview Scheduler",
+      description: "A secure and user-friendly MERN stack application for scheduling and managing interviews, integrated with JWT authentication.",
+      tags: ["fullstack"],
+      techStack: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Tailwind CSS"],
+      image: "https://portfolio-rahulgawade.vercel.app/static/media/interview_scheduler.jpg",
       links: {
         github: "#",
-        live: "#"
+        live: "http://154.53.42.27:5000/"
       }
     },
     {
-      title: "Cloud Infrastructure Monitor",
-      description: "Real-time monitoring dashboard for cloud infrastructure with automated scaling and alert systems.",
-      tags: ["backend", "devops"],
-      techStack: ["Node.js", "AWS", "Docker", "MongoDB"],
-      image: "/api/placeholder/600/400",
+      title: "AII Venture Website",
+      description: "Responsive startup website designed for a US-based company using React and Tailwind, with NodeMailer for email integration.",
+      tags: ["frontend"],
+      techStack: ["React.js", "Tailwind CSS", "NodeMailer"],
+      image: "https://portfolio-rahulgawade.vercel.app/static/media/aiiventure.jpg",
       links: {
         github: "#",
-        live: "#"
+        live: "https://dream-nest-pokimd9m8-vrushali-mores-projects.vercel.app/"
       }
     },
     {
-      title: "Secure Chat Application",
-      description: "End-to-end encrypted chat application with real-time translation and file sharing capabilities.",
-      tags: ["fullstack", "security"],
-      techStack: ["Next.js", "PostgreSQL", "WebSocket", "Azure"],
-      image: "/api/placeholder/600/400",
+      title: "Real-Time Rental Application & Payment System",
+      description: "Multi-step MERN stack rental application developed for a US client with secure payment via Square API.",
+      tags: ["fullstack", "devops"],
+      techStack: ["React.js", "Node.js", "MongoDB", "Express.js", "Square API", "Docker", "AWS"],
+      image: "https://portfolio-rahulgawade.vercel.app/static/media/rentapp.jpg",
       links: {
         github: "#",
-        live: "#"
+        live: "https://finneyproperties.com/"
+      }
+    },
+    {
+      title: "Real Estate Website",
+      description: "A clean, modern real estate website with property listings and search filters built using React.",
+      tags: ["frontend"],
+      techStack: ["React.js", "Tailwind CSS", "Vite"],
+      image: "https://real-estate-tan-six.vercel.app/realestate-cover.png",
+      links: {
+        github: "https://github.com/rahulgawadee/real-estate",
+        live: "https://real-estate-tan-six.vercel.app/"
+      }
+    },
+    {
+      title: "Generative AI Projects",
+      description: "Collection of innovative AI applications built using Gemini Pro and Python, showcasing text and image generation.",
+      tags: ["fullstack", "ai"],
+      techStack: ["Python", "Streamlit", "Gemini Pro", "NLP"],
+      image: "https://raw.githubusercontent.com/rahulgawadee/Generative-AI/main/cover.png",
+      links: {
+        github: "https://github.com/rahulgawadee/Generative-AI",
+        live: "https://github.com/rahulgawadee/Generative-AI"
+      }
+    },
+    {
+      title: "BookRides – Vehicle Booking Platform",
+      description: "A platform for booking rides, built using the MERN stack and featuring real-time user feedback and booking confirmation.",
+      tags: ["fullstack"],
+      techStack: ["MongoDB", "Express.js", "React", "Node.js"],
+      image: "https://bookride.onrender.com/assets/ride-cover.png",
+      links: {
+        github: "https://github.com/rahulgawadee/BookRides",
+        live: "https://bookride.onrender.com"
+      }
+    },
+    {
+      title: "Fabric Damage Detection (ML)",
+      description: "A Machine Learning-based web app to detect and classify fabric damage using trained models.",
+      tags: ["ai"],
+      techStack: ["TensorFlow", "Python", "React.js"],
+      image: "https://final-year-project-black.vercel.app/fabric-cover.png",
+      links: {
+        github: "https://github.com/rahulgawadee/Fabric-Damage-Detection",
+        live: "https://final-year-project-black.vercel.app/"
+      }
+    },
+    {
+      title: "Rahul's Store – eCommerce Site",
+      description: "An eCommerce website featuring cart, checkout, and product filtering functionalities, built with React and Tailwind.",
+      tags: ["frontend"],
+      techStack: ["React.js", "Tailwind CSS"],
+      image: "https://rahulsshopeee.netlify.app/store-cover.png",
+      links: {
+        github: "https://github.com/rahulgawadee/Rahuls-Store",
+        live: "https://rahulsshopeee.netlify.app/"
       }
     }
   ];
-
+  
   const filters = [
     { id: 'all', label: 'All Projects', icon: Layout },
     { id: 'frontend', label: 'Frontend', icon: Monitor },

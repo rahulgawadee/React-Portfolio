@@ -68,8 +68,7 @@ const ResumePage = () => {
             <span className="ml-2 animate-pulse">_</span>
           </h1>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            A passionate developer with expertise in full-stack development and AI technologies.
-            Always eager to learn and create innovative solutions.
+            A passionate Full-Stack Developer skilled in MERN stack, AI, and cloud technologies, currently pursuing a Bachelor's degree in Computer Engineering.
           </p>
           <Terminal className="absolute right-0 top-0 text-slate-700 opacity-20 w-32 h-32 -rotate-12" />
         </div>
@@ -90,96 +89,88 @@ const ResumePage = () => {
           <div className="lg:col-span-3">
             <div className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-xl border border-slate-700/50">
               {/* Skills Section */}
-              <div className={activeTab === 'skills' ? 'block' : 'hidden'}>
-                <h2 className="text-2xl font-bold text-emerald-400 mb-6">Technical Skills</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-200 mb-4">Frontend</h3>
-                    <SkillBar skill="React.js" level={90} />
-                    <SkillBar skill="Next.js" level={85} />
-                    <SkillBar skill="TypeScript" level={80} />
-                    <SkillBar skill="Tailwind CSS" level={95} />
+              {activeTab === 'skills' && (
+                <>
+                  <h2 className="text-2xl font-bold text-emerald-400 mb-6">Technical Skills</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-200 mb-4">Frontend</h3>
+                      <SkillBar skill="React.js" level={90} />
+                      <SkillBar skill="Next.js" level={85} />
+                      <SkillBar skill="TypeScript" level={80} />
+                      <SkillBar skill="Tailwind CSS" level={95} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-slate-200 mb-4">Backend & Tools</h3>
+                      <SkillBar skill="Node.js" level={85} />
+                      <SkillBar skill="MongoDB" level={80} />
+                      <SkillBar skill="REST APIs" level={85} />
+                      <SkillBar skill="AWS & Docker" level={75} />
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-200 mb-4">Backend</h3>
-                    <SkillBar skill="Node.js" level={85} />
-                    <SkillBar skill="Python" level={80} />
-                    <SkillBar skill="PostgreSQL" level={75} />
-                    <SkillBar skill="AWS" level={70} />
-                  </div>
-                </div>
-              </div>
+                </>
+              )}
 
               {/* Experience Section */}
-              <div className={activeTab === 'experience' ? 'block' : 'hidden'}>
-                <h2 className="text-2xl font-bold text-emerald-400 mb-6">Work Experience</h2>
-                <div className="space-y-6">
-                  <TimelineItem 
-                    year="2023 - Present"
-                    title="Senior Developer"
-                    subtitle="Tech Innovation Labs"
-                    description="Leading full-stack development of enterprise applications, mentoring junior developers, and implementing AI solutions."
-                  />
-                  <TimelineItem 
-                    year="2021 - 2023"
-                    title="Full Stack Developer"
-                    subtitle="Digital Solutions Inc"
-                    description="Developed and maintained multiple web applications using React, Node.js, and AWS infrastructure."
-                  />
-                  <TimelineItem 
-                    year="2020 - 2021"
-                    title="Junior Developer"
-                    subtitle="StartUp Tech"
-                    description="Worked on frontend development using React and implemented responsive designs."
-                  />
-                </div>
-              </div>
+              {activeTab === 'experience' && (
+                <>
+                  <h2 className="text-2xl font-bold text-emerald-400 mb-6">Work Experience</h2>
+                  <div className="space-y-6">
+                    <TimelineItem 
+                      year="Oct 2024 – Present"
+                      title="Full Stack Developer Intern"
+                      subtitle="Aii Venture Pvt. Ltd, Pune"
+                      description="Developed a real-time rent application, chat system, and full-stack web solutions using MERN stack. Deployed applications with Docker on AWS with 99.9% uptime."
+                    />
+                  </div>
+                </>
+              )}
 
               {/* Education Section */}
-              <div className={activeTab === 'education' ? 'block' : 'hidden'}>
-                <h2 className="text-2xl font-bold text-emerald-400 mb-6">Education</h2>
-                <div className="space-y-6">
-                  <TimelineItem 
-                    year="2017 - 2021"
-                    title="B.Tech"
-                    subtitle="Computer Science Engineering"
-                    description="CGPA: 8.9/10 - Specialized in AI and Machine Learning"
-                  />
-                  <TimelineItem 
-                    year="2015 - 2017"
-                    title="High School"
-                    subtitle="Science and Mathematics"
-                    description="Percentage: 94% - School Topper"
-                  />
-                </div>
-              </div>
+              {activeTab === 'education' && (
+                <>
+                  <h2 className="text-2xl font-bold text-emerald-400 mb-6">Education</h2>
+                  <div className="space-y-6">
+                    <TimelineItem 
+                      year="2021 - 2025"
+                      title="B.E. - Computer Engineering"
+                      subtitle="Government College of Engineering & Research, Awasari"
+                      description="CGPA: 8.40/10 - Focus on AI, Web Development, and Cloud Technologies"
+                    />
+                    <TimelineItem 
+                      year="2019"
+                      title="H.S.C"
+                      subtitle="Bhairavnath Jr. College, Bhosari"
+                      description="Score: 67.54%"
+                    />
+                    <TimelineItem 
+                      year="2017"
+                      title="S.S.C"
+                      subtitle="Priyadarshani High School, Bhosari"
+                      description="Score: 75.60%"
+                    />
+                  </div>
+                </>
+              )}
 
               {/* Achievements Section */}
-              <div className={activeTab === 'achievements' ? 'block' : 'hidden'}>
-                <h2 className="text-2xl font-bold text-emerald-400 mb-6">Achievements & Certifications</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 hover:border-emerald-500/50 transition-colors duration-300">
-                    <Star className="w-8 h-8 text-emerald-400 mb-2" />
-                    <h3 className="text-lg font-semibold text-slate-200 mb-2">AWS Certified Developer</h3>
-                    <p className="text-slate-400">Associate Level Certification - 2023</p>
+              {activeTab === 'achievements' && (
+                <>
+                  <h2 className="text-2xl font-bold text-emerald-400 mb-6">Achievements & Certifications</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 hover:border-emerald-500/50 transition-colors duration-300">
+                      <FileText className="w-8 h-8 text-emerald-400 mb-2" />
+                      <h3 className="text-lg font-semibold text-slate-200 mb-2">Internship at Aii Venture</h3>
+                      <p className="text-slate-400">Developed live cloud-deployed projects for a US startup</p>
+                    </div>
+                    <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 hover:border-emerald-500/50 transition-colors duration-300">
+                      <Star className="w-8 h-8 text-emerald-400 mb-2" />
+                      <h3 className="text-lg font-semibold text-slate-200 mb-2">AI/ML Projects</h3>
+                      <p className="text-slate-400">Worked on Generative AI with Google Gemini Pro and TensorFlow</p>
+                    </div>
                   </div>
-                  <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 hover:border-emerald-500/50 transition-colors duration-300">
-                    <Award className="w-8 h-8 text-emerald-400 mb-2" />
-                    <h3 className="text-lg font-semibold text-slate-200 mb-2">Hackathon Winner</h3>
-                    <p className="text-slate-400">First Place in National CodeFest 2022</p>
-                  </div>
-                  <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 hover:border-emerald-500/50 transition-colors duration-300">
-                    <FileText className="w-8 h-8 text-emerald-400 mb-2" />
-                    <h3 className="text-lg font-semibold text-slate-200 mb-2">Research Paper</h3>
-                    <p className="text-slate-400">Published in International Conference on AI - 2023</p>
-                  </div>
-                  <div className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 hover:border-emerald-500/50 transition-colors duration-300">
-                    <Code className="w-8 h-8 text-emerald-400 mb-2" />
-                    <h3 className="text-lg font-semibold text-slate-200 mb-2">Open Source</h3>
-                    <p className="text-slate-400">Major Contributor to Popular React Libraries</p>
-                  </div>
-                </div>
-              </div>
+                </>
+              )}
             </div>
           </div>
         </div>
