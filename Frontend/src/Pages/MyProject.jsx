@@ -39,7 +39,7 @@ const ProjectsPage = () => {
       description: "A secure and user-friendly MERN stack application for scheduling and managing interviews, integrated with JWT authentication.",
       tags: ["fullstack"],
       techStack: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Tailwind CSS"],
-      image: "https://portfolio-rahulgawade.vercel.app/static/media/interview_scheduler.jpg",
+      image: "/api/placeholder/800/600",
       links: {
         github: "#",
         live: "http://154.53.42.27:5000/"
@@ -50,7 +50,7 @@ const ProjectsPage = () => {
       description: "Responsive startup website designed for a US-based company using React and Tailwind, with NodeMailer for email integration.",
       tags: ["frontend"],
       techStack: ["React.js", "Tailwind CSS", "NodeMailer"],
-      image: "https://portfolio-rahulgawade.vercel.app/static/media/aiiventure.jpg",
+      image: "/api/placeholder/800/600",
       links: {
         github: "#",
         live: "https://dream-nest-pokimd9m8-vrushali-mores-projects.vercel.app/"
@@ -61,7 +61,7 @@ const ProjectsPage = () => {
       description: "Multi-step MERN stack rental application developed for a US client with secure payment via Square API.",
       tags: ["fullstack", "devops"],
       techStack: ["React.js", "Node.js", "MongoDB", "Express.js", "Square API", "Docker", "AWS"],
-      image: "https://portfolio-rahulgawade.vercel.app/static/media/rentapp.jpg",
+      image: "/api/placeholder/800/600",
       links: {
         github: "#",
         live: "https://finneyproperties.com/"
@@ -72,7 +72,7 @@ const ProjectsPage = () => {
       description: "A clean, modern real estate website with property listings and search filters built using React.",
       tags: ["frontend"],
       techStack: ["React.js", "Tailwind CSS", "Vite"],
-      image: "https://real-estate-tan-six.vercel.app/realestate-cover.png",
+      image: "/api/placeholder/800/600",
       links: {
         github: "https://github.com/rahulgawadee/real-estate",
         live: "https://real-estate-tan-six.vercel.app/"
@@ -83,7 +83,7 @@ const ProjectsPage = () => {
       description: "Collection of innovative AI applications built using Gemini Pro and Python, showcasing text and image generation.",
       tags: ["fullstack", "ai"],
       techStack: ["Python", "Streamlit", "Gemini Pro", "NLP"],
-      image: "https://raw.githubusercontent.com/rahulgawadee/Generative-AI/main/cover.png",
+      image: "/api/placeholder/800/600",
       links: {
         github: "https://github.com/rahulgawadee/Generative-AI",
         live: "https://github.com/rahulgawadee/Generative-AI"
@@ -94,7 +94,7 @@ const ProjectsPage = () => {
       description: "A platform for booking rides, built using the MERN stack and featuring real-time user feedback and booking confirmation.",
       tags: ["fullstack"],
       techStack: ["MongoDB", "Express.js", "React", "Node.js"],
-      image: "https://bookride.onrender.com/assets/ride-cover.png",
+      image: "/api/placeholder/800/600",
       links: {
         github: "https://github.com/rahulgawadee/BookRides",
         live: "https://bookride.onrender.com"
@@ -105,7 +105,7 @@ const ProjectsPage = () => {
       description: "A Machine Learning-based web app to detect and classify fabric damage using trained models.",
       tags: ["ai"],
       techStack: ["TensorFlow", "Python", "React.js"],
-      image: "https://final-year-project-black.vercel.app/fabric-cover.png",
+      image: "/api/placeholder/800/600",
       links: {
         github: "https://github.com/rahulgawadee/Fabric-Damage-Detection",
         live: "https://final-year-project-black.vercel.app/"
@@ -116,7 +116,7 @@ const ProjectsPage = () => {
       description: "An eCommerce website featuring cart, checkout, and product filtering functionalities, built with React and Tailwind.",
       tags: ["frontend"],
       techStack: ["React.js", "Tailwind CSS"],
-      image: "https://rahulsshopeee.netlify.app/store-cover.png",
+      image: "/api/placeholder/800/600",
       links: {
         github: "https://github.com/rahulgawadee/Rahuls-Store",
         live: "https://rahulsshopeee.netlify.app/"
